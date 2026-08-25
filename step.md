@@ -1,10 +1,10 @@
 !![alt text](image-1.png)
-Set up & pull the data
+<!-- Set up & pull the data
 Install pandas, numpy, scikit-learn, xgboost or lightgbm, imbalanced-learn, shap, fastapi, streamlit, joblib. Use the Kaggle API (kaggle competitions download -c home-credit-default-risk) to grab all the CSVs: application_train/test, bureau, bureau_balance, previous_application, POS_CASH_balance, credit_card_balance, installments_payments. Some of these run into millions of rows, so work in a Kaggle Notebook (free 16GB RAM) rather than a weak local machine. -->
-<!-- 2
-EDA on the main table only
+<!-- 2 -->
+<!-- EDA on the main table only
 Explore application_train.csv in isolation first: confirm the 92:8 TARGET imbalance yourself, plot a missing-value heatmap, split numeric vs categorical columns, check correlation of top numeric features with TARGET. Get a feel for what you're predicting before touching the other tables. -->
-3
+3 -->
 Aggregate and join the auxiliary tables
 This is the core skill the project teaches. For bureau, previous_application, POS_CASH_balance, credit_card_balance, and installments_payments: groupby SK_ID_CURR and aggregate with mean/sum/count/min/max, giving one row per client per table. Merge all of those onto application_train on SK_ID_CURR. You'll go from 8 disconnected tables to one modeling-ready dataframe.
 4
